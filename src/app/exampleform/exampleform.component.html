@@ -1,0 +1,19 @@
+<div class="col-md-2">
+</div>
+<div class="col-md-4">
+  <form [formGroup]="exampleForm">
+     <div class="form-group">
+       <label>Name:</label>
+       <input type="text" class="form-control" [formControl]="exampleForm.controls['NAME']">
+     </div> 
+     <div class="form-group">
+       <label>Phone Number:</label>
+       <input type="text" class="form-control" [formControl]="exampleForm.controls['PHONE_NUMBER']">
+     </div>
+      <button (click)="submit()">Submit</button>
+  </form>
+
+  <div *ngFor="let student of studentArray">
+    <p>{{ student.id}} {{student.name}} {{student.password}} </p>
+  </div>
+</div>
